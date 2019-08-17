@@ -14,7 +14,7 @@ describe('Census', function() {
     await driver.quit();
   })
   it('Census', async function() {
-    await driver.get("https://eishealth--dev--c.cs115.visual.force.com/apex/Census")
+    await driver.get("https://dev-cesphn.cs115.force.com/apex/Census")
     await driver.sleep(4000)
     await driver.findElement(By.id("Business Name")).sendKeys("Selenium")
     await driver.findElement(By.css(".c-google-address-autocomplete > #address")).sendKeys("ggd")
