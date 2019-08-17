@@ -14,7 +14,7 @@ describe('Invalid CC (Allied Health Provider)', function() {
     await driver.quit();
   })
   it('Invalid CC (Allied Health Provider)', async function() {
-    await driver.get("https://eishealth--dev--c.cs115.visual.force.com/apex/MembershipSignUp")
+    await driver.get("https://dev-cesphn.cs115.force.com/apex/MembershipSignUp")
     await driver.findElement(By.id("type")).click()
     {
       const dropdown = await driver.findElement(By.id("type"))
