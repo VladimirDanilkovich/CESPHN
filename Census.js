@@ -142,10 +142,11 @@ describe('Census', function() {
     await driver.findElement(By.css(".input-group > #QIPAccreditationExpiryDate")).click()
     await driver.findElement(By.css(".input-group > #QIPAccreditationExpiryDate")).sendKeys("25/11/2025")
     await driver.findElement(By.css(".wizard-btn-submit")).click()
-    await driver.sleep(7000)
-    {
-      const elements = await driver.findElements(By.xpath("//fieldset"))
-      assert(!elements.exists)
-    }
+    await driver.wait(until.elementLocated(By.xpath("//fieldset")), 20000)
+    //await driver.sleep(7000)
+    //{
+      //const elements = await driver.findElements(By.xpath("//fieldset"))
+      //assert(!elements.length)
+    //}
   })
 })
