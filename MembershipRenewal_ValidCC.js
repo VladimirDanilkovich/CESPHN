@@ -14,7 +14,7 @@ describe('Valid CC', function() {
     await driver.quit();
   })
   it('Valid CC', async function() {
-    await driver.get("https://eishealth--dev--c.cs115.visual.force.com/apex/membershiprenewal")
+    await driver.get("https://dev-cesphn.cs115.force.com/apex/membershiprenewal")
     await driver.findElement(By.id("memberNumber")).click()
     await driver.findElement(By.id("memberNumber")).sendKeys("201097")
     await driver.findElement(By.id("memberEmail")).click()
