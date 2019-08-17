@@ -18,125 +18,125 @@ describe('Census', function() {
     await driver.sleep(4000)
     await driver.findElement(By.id("Business Name")).sendKeys("Selenium")
     await driver.findElement(By.css(".c-google-address-autocomplete > #address")).sendKeys("ggd")
-    await driver.findElement(By.id("Suburb*")).sendKeys("mel")
-    await driver.findElement(By.id("State*")).sendKeys("NT")
-    await driver.findElement(By.id("Postcode*")).sendKeys("123355677899")
+    await driver.findElement(By.id("Suburb")).sendKeys("mel")
+    await driver.findElement(By.id("State")).sendKeys("NT")
+    await driver.findElement(By.id("Postcode")).sendKeys("123355677899")
     await driver.findElement(By.css(".ng-invalid > ng-transclude .row:nth-child(2)")).click()
-    await driver.findElement(By.id("BusinessEmail*")).sendKeys("developer+selenium@vertic.com.au")
-    await driver.findElement(By.id("Street*")).click()
-    await driver.findElement(By.id("Street*")).sendKeys("ggd")
-    await driver.findElement(By.id("BusinessPhone*")).sendKeys("1237329204")
+    await driver.findElement(By.id("Business Email")).sendKeys("developer+selenium@vertic.com.au")
+    await driver.findElement(By.id("Street")).click()
+    await driver.findElement(By.id("Street")).sendKeys("ggd")
+    await driver.findElement(By.id("Business Phone")).sendKeys("1237329204")
     await driver.findElement(By.css(".wizard-btn")).click()
     await driver.sleep(3000)
-    await driver.findElement(By.id("Disability Access*")).click()
+    await driver.findElement(By.id("Disability Access")).click()
     {
-      const dropdown = await driver.findElement(By.id("DisabilityAccess*"))
+      const dropdown = await driver.findElement(By.id("Disability Access"))
       await dropdown.findElement(By.xpath("//option[. = 'Braille Signage']")).click()
     }
-    await driver.findElement(By.id("PublicTransport*")).click()
+    await driver.findElement(By.id("PublicTransport")).click()
     {
-      const dropdown = await driver.findElement(By.id("PublicTransport*"))
+      const dropdown = await driver.findElement(By.id("Public Transport"))
       await dropdown.findElement(By.xpath("//option[. = 'Yes']")).click()
     }
-    await driver.findElement(By.id("ClinicalSoftware*")).click()
+    await driver.findElement(By.id("Clinical Software")).click()
     {
-      const dropdown = await driver.findElement(By.id("ClinicalSoftware*"))
+      const dropdown = await driver.findElement(By.id("Clinical Software"))
       await dropdown.findElement(By.xpath("//option[. = 'Dental 4 Windows']")).click()
     }
     await driver.findElement(By.id("PharmacySoftware*")).click()
     {
-      const dropdown = await driver.findElement(By.id("PharmacySoftware*"))
+      const dropdown = await driver.findElement(By.id("Pharmacy Software"))
       await dropdown.findElement(By.xpath("//option[. = 'MyPractice']")).click()
     }
-    await driver.findElement(By.id("SecureMessagingSolution*")).click()
+    await driver.findElement(By.id("Secure Messaging Solution")).click()
     {
-      const dropdown = await driver.findElement(By.id("SecureMessagingSolution*"))
+      const dropdown = await driver.findElement(By.id("Secure Messaging Solution"))
       await dropdown.findElement(By.xpath("//option[. = 'MD Exhange']")).click()
     }
-    await driver.findElement(By.id("ElectronicPrescriptionSoftware*")).click()
+    await driver.findElement(By.id("Electronic Prescription Software")).click()
     {
-      const dropdown = await driver.findElement(By.id("ElectronicPrescriptionSoftware*"))
+      const dropdown = await driver.findElement(By.id("Electronic Prescription Software"))
       await dropdown.findElement(By.xpath("//option[. = 'eRX']")).click()
     }
-    await driver.findElement(By.id("HealthProviderIdentifierOrganisation*")).click()
-    await driver.findElement(By.id("HealthProviderIdentifierOrganisation*")).sendKeys("selenium1")
+    await driver.findElement(By.id("Health Provider Identifier Organisation")).click()
+    await driver.findElement(By.id("Health Provider Identifier Organisation")).sendKeys("selenium1")
     await driver.sleep(3000)
     await driver.findElement(By.css(".wizard-btn-next")).click()
-    await driver.findElement(By.id("CorporatePractice*")).click()
+    await driver.findElement(By.id("Corporate Practice")).click()
     {
-      const dropdown = await driver.findElement(By.id("CorporatePractice*"))
+      const dropdown = await driver.findElement(By.id("Corporate Practice"))
       await dropdown.findElement(By.xpath("//option[. = 'Yes']")).click()
     }
-    await driver.findElement(By.id("PIPsClaimed*")).click()
+    await driver.findElement(By.id("PIPs Claimed")).click()
     {
-      const dropdown = await driver.findElement(By.id("PIPsClaimed*"))
+      const dropdown = await driver.findElement(By.id("PIPs Claimed"))
       await dropdown.findElement(By.xpath("//option[. = 'Aged Care Access Initiative']")).click()
     }
-    await driver.findElement(By.id("PIPsIncentiveLevel*")).click()
+    await driver.findElement(By.id("PIPs Incentive Level")).click()
     {
-      const dropdown = await driver.findElement(By.id("PIPsIncentiveLevel*"))
+      const dropdown = await driver.findElement(By.id("PIPs Incentive Level"))
       await dropdown.findElement(By.xpath("//option[. = 'Asthma']")).click()
     }
-    await driver.findElement(By.id("SIPsClaimed*")).click()
+    await driver.findElement(By.id("SIPs Claimed")).click()
     {
-      const dropdown = await driver.findElement(By.id("SIPsClaimed*"))
+      const dropdown = await driver.findElement(By.id("SIPs Claimed"))
       await dropdown.findElement(By.xpath("//option[. = 'Cervical Screening']")).click()
     }
-    await driver.findElement(By.id("RecallPatientsforHealthAssessments*")).click()
+    await driver.findElement(By.id("Recall Patients for Health Assessments")).click()
     {
-      const dropdown = await driver.findElement(By.id("RecallPatientsforHealthAssessments*"))
+      const dropdown = await driver.findElement(By.id("Recall Patients for Health Assessments"))
       await dropdown.findElement(By.xpath("//option[. = 'No']")).click()
     }
-    await driver.findElement(By.id("Provide Training for Nursing Students*")).click()
+    await driver.findElement(By.id("Provide Training for Nursing Students")).click()
     {
-      const dropdown = await driver.findElement(By.id("Provide Training for Nursing Students*"))
+      const dropdown = await driver.findElement(By.id("Provide Training for Nursing Students"))
       await dropdown.findElement(By.xpath("//option[. = 'Yes']")).click()
     }
-    await driver.findElement(By.id("Provide Training for GP Registrars*")).click()
+    await driver.findElement(By.id("Provide Training for GP Registrars")).click()
     {
-      const dropdown = await driver.findElement(By.id("Provide Training for GP Registrars*"))
+      const dropdown = await driver.findElement(By.id("Provide Training for GP Registrars"))
       await dropdown.findElement(By.xpath("//option[. = 'Yes']")).click()
     }
-    await driver.findElement(By.id("Training for Medical Students*")).click()
+    await driver.findElement(By.id("Training for Medical Students")).click()
     {
-      const dropdown = await driver.findElement(By.id("Training for Medical Students*"))
+      const dropdown = await driver.findElement(By.id("Training for Medical Students"))
       await dropdown.findElement(By.xpath("//option[. = 'Yes']")).click()
     }
-    await driver.findElement(By.id("Recall or Reminder System*")).click()
+    await driver.findElement(By.id("Recall or Reminder System")).click()
     {
-      const dropdown = await driver.findElement(By.id("Recall or Reminder System*"))
+      const dropdown = await driver.findElement(By.id("Recall or Reminder System"))
       await dropdown.findElement(By.xpath("//option[. = 'Breast Cancer Screening']")).click()
     }
-    await driver.findElement(By.id("Bulk Billing Options for Customers*")).click()
+    await driver.findElement(By.id("Bulk Billing Options for Customers")).click()
     {
-      const dropdown = await driver.findElement(By.id("Bulk Billing Options for Customers*"))
+      const dropdown = await driver.findElement(By.id("Bulk Billing Options for Customers"))
       await dropdown.findElement(By.xpath("//option[. = 'No']")).click()
     }
-    await driver.findElement(By.id("Preferred Pathology Provider*")).click()
+    await driver.findElement(By.id("Preferred Pathology Provider")).click()
     {
-      const dropdown = await driver.findElement(By.id("Preferred Pathology Provider*"))
+      const dropdown = await driver.findElement(By.id("Preferred Pathology Provider"))
       await dropdown.findElement(By.xpath("//option[. = 'Laverty']")).click()
     }
-    await driver.findElement(By.id("Allied Health Services*")).click()
+    await driver.findElement(By.id("Allied Health Services")).click()
     {
-      const dropdown = await driver.findElement(By.id("Allied Health Services*"))
+      const dropdown = await driver.findElement(By.id("Allied Health Services"))
       await dropdown.findElement(By.xpath("//option[. = 'Acupuncture']")).click()
     }
-    await driver.findElement(By.id("Mammogram Referrals*")).click()
+    await driver.findElement(By.id("Mammogram Referrals")).click()
     {
-      const dropdown = await driver.findElement(By.id("Mammogram Referrals*"))
+      const dropdown = await driver.findElement(By.id("Mammogram Referrals"))
       await dropdown.findElement(By.xpath("//option[. = 'Campsie Health Centre']")).click()
     }
-    await driver.findElement(By.id("Track ATSI Status*")).click()
+    await driver.findElement(By.id("Track ATSI Status")).click()
     {
-      const dropdown = await driver.findElement(By.id("Track ATSI Status*"))
+      const dropdown = await driver.findElement(By.id("Track ATSI Status"))
       await dropdown.findElement(By.xpath("//option[. = 'Yes']")).click()
     }
     await driver.sleep(3000)
     await driver.findElement(By.css(".wizard-btn-next")).click()
-    await driver.findElement(By.id("QIP Accreditation*")).click()
+    await driver.findElement(By.id("QIP Accreditation")).click()
     {
-      const dropdown = await driver.findElement(By.id("QIP Accreditation*"))
+      const dropdown = await driver.findElement(By.id("QIP Accreditation"))
       await dropdown.findElement(By.xpath("//option[. = 'No']")).click()
     }
     await driver.findElement(By.css(".input-group > #QIPAccreditationExpiryDate")).click()
