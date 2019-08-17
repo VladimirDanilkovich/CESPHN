@@ -14,7 +14,7 @@ describe('Professionals', function() {
     await driver.quit();
   })
   it('Professionals', async function() {
-    await driver.get("https://eishealth--dev--c.cs115.visual.force.com/apex/servicedirectory")
+    await driver.get("https://dev-cesphn.cs115.force.com/apex/servicedirectory")
     await driver.findElement(By.id("Professional Type")).click()
     {
       const dropdown = await driver.findElement(By.id("Professional Type"))
