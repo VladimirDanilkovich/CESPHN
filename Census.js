@@ -43,7 +43,7 @@ describe('Census', function() {
       const dropdown = await driver.findElement(By.id("Clinical Software"))
       await dropdown.findElement(By.css("*[value='Dental 4 Windows']")).click()
     }
-    await driver.findElement(By.id("PharmacySoftware*")).click()
+    await driver.findElement(By.id("Pharmacy Software")).click()
     {
       const dropdown = await driver.findElement(By.id("Pharmacy Software"))
       await dropdown.findElement(By.css("*[value='MyPractice']")).click()
