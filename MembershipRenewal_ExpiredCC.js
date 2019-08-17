@@ -20,6 +20,7 @@ describe('Expired CC', function() {
     await driver.findElement(By.id("memberNumber")).sendKeys("201097")
     await driver.findElement(By.id("memberEmail")).click()
     await driver.findElement(By.id("memberEmail")).sendKeys("developer+selenium@vertic.com.au")
+    await driver.sleep(3000)
     await driver.findElement(By.id("cardNumber")).click()
     await driver.findElement(By.id("cardNumber")).sendKeys("4444 3333 2222 1111")
     await driver.findElement(By.id("customerName")).click()
