@@ -67,7 +67,6 @@ describe('Expired CC (Allied Health Provider)', function() {
     await driver.findElement(By.id("CVN")).click()
     await driver.findElement(By.id("CVN")).sendKeys("123")
     await driver.findElement(By.css(".rsform-submit-button")).click()
-    console.log("`set speed` is a no-op in code export, use `pause` instead")
     await driver.wait(until.elementLocated(By.css(".toast-error")), 20000)
   })
 })
