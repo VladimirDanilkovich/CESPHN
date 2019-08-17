@@ -25,7 +25,6 @@ describe('Valid CC (Allied Health Provider)', function() {
     await driver.findElement(By.id("firstName")).sendKeys("Selenium")
     await driver.findElement(By.id("lastName")).sendKeys("Test")
     await driver.findElement(By.id("email")).sendKeys("developer+selenium@vertic.com.au")
-    await driver.findElement(By.id("category")).click()
     {
       const dropdown = await driver.findElement(By.id("category"))
       await dropdown.findElement(By.css("*[value='Dentist']")).click()
@@ -33,7 +32,7 @@ describe('Valid CC (Allied Health Provider)', function() {
     await driver.findElement(By.id("product")).click()
     {
       const dropdown = await driver.findElement(By.id("product"))
-      await dropdown.findElement(By.xpath("//option[. = 'Default Product']")).click()
+      await dropdown.findElement(By.css("*[value='Default Product']")).click()
     }
     await driver.findElement(By.id("gender")).click()
     {
@@ -69,6 +68,5 @@ describe('Valid CC (Allied Health Provider)', function() {
     await driver.findElement(By.css(".rsform-submit-button")).click()
     console.log("`set speed` is a no-op in code export, use `pause` instead")
     await driver.wait(until.elementLocated(By.css(".toast-success")), 20000)
-    console.log("`set speed` is a no-op in code export, use `pause` instead")
   })
 })
