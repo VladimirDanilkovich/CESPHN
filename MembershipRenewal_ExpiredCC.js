@@ -15,6 +15,7 @@ describe('Expired CC', function() {
   })
   it('Expired CC', async function() {
     await driver.get("https://eishealth--dev--c.cs115.visual.force.com/apex/membershiprenewal")
+    await driver.sleep(4000)
     await driver.findElement(By.id("memberNumber")).click()
     await driver.findElement(By.id("memberNumber")).sendKeys("201097")
     await driver.findElement(By.id("memberEmail")).click()
