@@ -29,7 +29,6 @@ describe('Valid CC (Stakeholder)', function() {
     await driver.findElement(By.id("membershipPostcode")).sendKeys("123355677899")
     await driver.findElement(By.id("firstName")).sendKeys("Selenium")
     await driver.findElement(By.id("lastName")).sendKeys("Test")
-    await driver.findElement(By.id("gender")).click()
     {
       const dropdown = await driver.findElement(By.id("gender"))
       await dropdown.findElement(By.css("*[value='Male']")).click()
