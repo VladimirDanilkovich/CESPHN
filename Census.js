@@ -31,7 +31,7 @@ describe('Census', function() {
     await driver.findElement(By.id("Disability Access")).click()
     {
       const dropdown = await driver.findElement(By.id("Disability Access"))
-      await dropdown.findElement(By.xpath("//option[. = 'Braille Signage']")).click()
+      await dropdown.findElement(By.xpath("//value[. = 'Braille Signage']")).click()
     }
     await driver.findElement(By.id("PublicTransport")).click()
     {
