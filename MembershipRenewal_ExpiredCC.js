@@ -28,12 +28,12 @@ describe('Expired CC', function() {
     await driver.findElement(By.id("Expiry Month")).click()
     {
       const dropdown = await driver.findElement(By.id("Expiry Month"))
-      await dropdown.findElement(By.xpath("//option[. = '01']")).click()
+      await dropdown.findElement(By.css("*[value='01']")).click()
     }
     await driver.findElement(By.id("Expiry Year")).click()
     {
       const dropdown = await driver.findElement(By.id("Expiry Year"))
-      await dropdown.findElement(By.xpath("//option[. = '2019']")).click()
+      await dropdown.findElement(By.css("*[value='2019']")).click()
     }
     await driver.findElement(By.id("CVN")).click()
     await driver.findElement(By.id("CVN")).sendKeys("123")
