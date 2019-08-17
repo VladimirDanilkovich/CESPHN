@@ -32,7 +32,7 @@ describe('Invalid CC (Allied Health Provider)', function() {
     await driver.findElement(By.id("product")).click()
     {
       const dropdown = await driver.findElement(By.id("product"))
-      await dropdown.findElement(By.css("*[value='Default Product']")).click()
+      await dropdown.findElement(By.css("*[label='Default Product']")).click()
     }
     await driver.findElement(By.id("gender")).click()
     {
@@ -66,7 +66,6 @@ describe('Invalid CC (Allied Health Provider)', function() {
     await driver.findElement(By.id("CVN")).click()
     await driver.findElement(By.id("CVN")).sendKeys("123")
     await driver.findElement(By.css(".rsform-submit-button")).click()
-    console.log("`set speed` is a no-op in code export, use `pause` instead")
     await driver.wait(until.elementLocated(By.css(".toast-error")), 20000)
   })
 })
