@@ -18,12 +18,12 @@ describe('Practices', function() {
     await driver.findElement(By.id("Type")).click()
     {
       const dropdown = await driver.findElement(By.id("Type"))
-      await dropdown.findElement(By.xpath("//option[. = 'Practices']")).click()
+      await dropdown.findElement(By.css("*[value='Practices']")).click()
     }
     await driver.findElement(By.id("Professional Type")).click()
     {
       const dropdown = await driver.findElement(By.id("Professional Type"))
-      await dropdown.findElement(By.xpath("//option[. = 'Allied Health']")).click()
+      await dropdown.findElement(By.css("*[value='Allied Health']")).click()
     }
     await driver.findElement(By.id("Location")).click()
     await driver.findElement(By.id("Location")).sendKeys("2350")
