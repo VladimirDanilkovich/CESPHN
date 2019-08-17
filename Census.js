@@ -16,75 +16,75 @@ describe('Census', function() {
   it('Census', async function() {
     await driver.get("https://eishealth--dev--c.cs115.visual.force.com/apex/Census")
     await driver.sleep(4000)
-    await driver.findElement(By.id("Business Name *")).sendKeys("Selenium")
+    await driver.findElement(By.id("BusinessName *")).sendKeys("Selenium")
     await driver.findElement(By.css(".c-google-address-autocomplete > #address")).sendKeys("ggd")
     await driver.findElement(By.id("Suburb*")).sendKeys("mel")
     await driver.findElement(By.id("State*")).sendKeys("NT")
     await driver.findElement(By.id("Postcode*")).sendKeys("123355677899")
     await driver.findElement(By.css(".ng-invalid > ng-transclude .row:nth-child(2)")).click()
-    await driver.findElement(By.id("Business Email*")).sendKeys("developer+selenium@vertic.com.au")
+    await driver.findElement(By.id("BusinessEmail*")).sendKeys("developer+selenium@vertic.com.au")
     await driver.findElement(By.id("Street*")).click()
     await driver.findElement(By.id("Street*")).sendKeys("ggd")
-    await driver.findElement(By.id("Business Phone*")).sendKeys("1237329204")
+    await driver.findElement(By.id("BusinessPhone*")).sendKeys("1237329204")
     await driver.findElement(By.css(".wizard-btn")).click()
     await driver.sleep(3000)
     await driver.findElement(By.id("Disability Access*")).click()
     {
-      const dropdown = await driver.findElement(By.id("Disability Access*"))
+      const dropdown = await driver.findElement(By.id("DisabilityAccess*"))
       await dropdown.findElement(By.xpath("//option[. = 'Braille Signage']")).click()
     }
-    await driver.findElement(By.id("Public Transport*")).click()
+    await driver.findElement(By.id("PublicTransport*")).click()
     {
-      const dropdown = await driver.findElement(By.id("Public Transport*"))
+      const dropdown = await driver.findElement(By.id("PublicTransport*"))
       await dropdown.findElement(By.xpath("//option[. = 'Yes']")).click()
     }
-    await driver.findElement(By.id("Clinical Software*")).click()
+    await driver.findElement(By.id("ClinicalSoftware*")).click()
     {
-      const dropdown = await driver.findElement(By.id("Clinical Software*"))
+      const dropdown = await driver.findElement(By.id("ClinicalSoftware*"))
       await dropdown.findElement(By.xpath("//option[. = 'Dental 4 Windows']")).click()
     }
-    await driver.findElement(By.id("Pharmacy Software*")).click()
+    await driver.findElement(By.id("PharmacySoftware*")).click()
     {
-      const dropdown = await driver.findElement(By.id("Pharmacy Software*"))
+      const dropdown = await driver.findElement(By.id("PharmacySoftware*"))
       await dropdown.findElement(By.xpath("//option[. = 'MyPractice']")).click()
     }
-    await driver.findElement(By.id("Secure Messaging Solution*")).click()
+    await driver.findElement(By.id("SecureMessagingSolution*")).click()
     {
-      const dropdown = await driver.findElement(By.id("Secure Messaging Solution*"))
+      const dropdown = await driver.findElement(By.id("SecureMessagingSolution*"))
       await dropdown.findElement(By.xpath("//option[. = 'MD Exhange']")).click()
     }
-    await driver.findElement(By.id("Electronic Prescription Software*")).click()
+    await driver.findElement(By.id("ElectronicPrescriptionSoftware*")).click()
     {
-      const dropdown = await driver.findElement(By.id("Electronic Prescription Software*"))
+      const dropdown = await driver.findElement(By.id("ElectronicPrescriptionSoftware*"))
       await dropdown.findElement(By.xpath("//option[. = 'eRX']")).click()
     }
-    await driver.findElement(By.id("Health Provider Identifier Organisation*")).click()
-    await driver.findElement(By.id("Health Provider Identifier Organisation*")).sendKeys("selenium1")
+    await driver.findElement(By.id("HealthProviderIdentifierOrganisation*")).click()
+    await driver.findElement(By.id("HealthProviderIdentifierOrganisation*")).sendKeys("selenium1")
     await driver.sleep(3000)
     await driver.findElement(By.css(".wizard-btn-next")).click()
-    await driver.findElement(By.id("Corporate Practice*")).click()
+    await driver.findElement(By.id("CorporatePractice*")).click()
     {
-      const dropdown = await driver.findElement(By.id("Corporate Practice*"))
+      const dropdown = await driver.findElement(By.id("CorporatePractice*"))
       await dropdown.findElement(By.xpath("//option[. = 'Yes']")).click()
     }
-    await driver.findElement(By.id("PIPs Claimed*")).click()
+    await driver.findElement(By.id("PIPsClaimed*")).click()
     {
-      const dropdown = await driver.findElement(By.id("PIPs Claimed*"))
+      const dropdown = await driver.findElement(By.id("PIPsClaimed*"))
       await dropdown.findElement(By.xpath("//option[. = 'Aged Care Access Initiative']")).click()
     }
-    await driver.findElement(By.id("PIPs Incentive Level*")).click()
+    await driver.findElement(By.id("PIPsIncentiveLevel*")).click()
     {
-      const dropdown = await driver.findElement(By.id("PIPs Incentive Level*"))
+      const dropdown = await driver.findElement(By.id("PIPsIncentiveLevel*"))
       await dropdown.findElement(By.xpath("//option[. = 'Asthma']")).click()
     }
-    await driver.findElement(By.id("SIPs Claimed*")).click()
+    await driver.findElement(By.id("SIPsClaimed*")).click()
     {
-      const dropdown = await driver.findElement(By.id("SIPs Claimed*"))
+      const dropdown = await driver.findElement(By.id("SIPsClaimed*"))
       await dropdown.findElement(By.xpath("//option[. = 'Cervical Screening']")).click()
     }
-    await driver.findElement(By.id("Recall Patients for Health Assessments*")).click()
+    await driver.findElement(By.id("RecallPatientsforHealthAssessments*")).click()
     {
-      const dropdown = await driver.findElement(By.id("Recall Patients for Health Assessments*"))
+      const dropdown = await driver.findElement(By.id("RecallPatientsforHealthAssessments*"))
       await dropdown.findElement(By.xpath("//option[. = 'No']")).click()
     }
     await driver.findElement(By.id("Provide Training for Nursing Students*")).click()
