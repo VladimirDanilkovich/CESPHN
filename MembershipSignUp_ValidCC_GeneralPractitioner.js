@@ -14,7 +14,7 @@ describe('Valid CC (General Practitioner)', function() {
     await driver.quit();
   })
   it('Valid CC (General Practitioner)', async function() {
-    await driver.get("https://eishealth--dev--c.cs115.visual.force.com/apex/MembershipSignUp")
+    await driver.get("https://dev-cesphn.cs115.force.com/apex/MembershipSignUp")
     await driver.findElement(By.id("type")).click()
     {
       const dropdown = await driver.findElement(By.id("type"))
