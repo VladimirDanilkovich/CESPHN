@@ -18,12 +18,11 @@ describe('Professionals', function() {
     await driver.findElement(By.id("Professional Type")).click()
     {
       const dropdown = await driver.findElement(By.id("Professional Type"))
-      await dropdown.findElement(By.xpath("//option[. = 'Allied Health Provider - Medicare Approved']")).click()
+      await dropdown.findElement(By.css("*[value='Allied Health Provider - Medicare Approved']")).click()
     }
-    await driver.findElement(By.id("Category")).click()
     {
       const dropdown = await driver.findElement(By.id("Category"))
-      await dropdown.findElement(By.xpath("//option[. = 'Pharmacist']")).click()
+      await dropdown.findElement(By.css("*[value='Pharmacist']")).click()
     }
     await driver.findElement(By.id("Location")).click()
     await driver.findElement(By.id("Location")).sendKeys("2350")
