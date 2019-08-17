@@ -23,7 +23,7 @@ describe('Expired CC (Stakeholder)', function() {
     await driver.findElement(By.id("product")).click()
     {
       const dropdown = await driver.findElement(By.id("product"))
-      await dropdown.findElement(By.xpath("//option[. = 'Default Product']")).click()
+      await dropdown.findElement(By.css("*[value='Default Product']")).click()
     }
     await driver.findElement(By.id("membershipPostcode")).click()
     await driver.findElement(By.id("membershipPostcode")).sendKeys("123355677899")
@@ -32,7 +32,7 @@ describe('Expired CC (Stakeholder)', function() {
     await driver.findElement(By.id("gender")).click()
     {
       const dropdown = await driver.findElement(By.id("gender"))
-      await dropdown.findElement(By.xpath("//option[. = 'Male']")).click()
+      await dropdown.findElement(By.css("*[value='Male']")).click()
     }
     await driver.findElement(By.css(".ng-scope > .form-control")).click()
     await driver.findElement(By.css(".ng-scope > .form-control")).sendKeys("Selenium")
@@ -48,16 +48,15 @@ describe('Expired CC (Stakeholder)', function() {
     await driver.findElement(By.id("customerName")).sendKeys("Selenium")
     {
       const dropdown = await driver.findElement(By.id("Expiry Month"))
-      await dropdown.findElement(By.xpath("//option[. = '01']")).click()
+      await dropdown.findElement(By.css("*[value='01']")).click()
     }
     {
       const dropdown = await driver.findElement(By.id("Expiry Year"))
-      await dropdown.findElement(By.xpath("//option[. = '2019']")).click()
+      await dropdown.findElement(By.css("*[value='2019']")).click()
     }
     await driver.findElement(By.id("CVN")).sendKeys("123")
     await driver.findElement(By.css(".rsform-submit-button")).click()
     console.log("`set speed` is a no-op in code export, use `pause` instead")
     await driver.wait(until.elementLocated(By.css(".toast-error")), 20000)
-    console.log("`set speed` is a no-op in code export, use `pause` instead")
   })
 })
