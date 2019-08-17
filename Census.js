@@ -145,7 +145,7 @@ describe('Census', function() {
     await driver.sleep(7000)
     {
       const elements = await driver.findElements(By.xpath("//fieldset"))
-      assert(!elements.length)
+      assert(!elements.presence)
     }
   })
 })
