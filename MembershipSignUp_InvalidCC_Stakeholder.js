@@ -25,7 +25,6 @@ describe('Inalid CC (Stakeholder)', function() {
       const dropdown = await driver.findElement(By.id("product"))
       await dropdown.findElement(By.css("*[label='Default Product']")).click()
     }
-    await driver.findElement(By.id("membershipPostcode")).click()
     await driver.findElement(By.id("membershipPostcode")).sendKeys("123355677899")
     await driver.findElement(By.id("firstName")).sendKeys("Selenium")
     await driver.findElement(By.id("lastName")).sendKeys("Test")
