@@ -32,7 +32,6 @@ describe('Inalid CC (Stakeholder)', function() {
       const dropdown = await driver.findElement(By.id("gender"))
       await dropdown.findElement(By.css("*[value='Male']")).click()
     }
-    await driver.findElement(By.css(".ng-scope > .form-control")).click()
     await driver.findElement(By.css(".ng-scope > .form-control")).sendKeys("Selenium")
     await driver.findElement(By.id("mobilePhone")).sendKeys("1237329204")
     await driver.findElement(By.css(".c-google-address-autocomplete > #address")).sendKeys("ggd")
