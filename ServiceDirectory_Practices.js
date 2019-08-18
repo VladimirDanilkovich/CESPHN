@@ -28,6 +28,6 @@ describe('Practices', function() {
     await driver.findElement(By.id("Location")).click()
     await driver.findElement(By.id("Location")).sendKeys("2350")
     await driver.findElement(By.css(".btn-cy2an")).click()
-    await driver.wait(until.elementLocated(By.css(".row:nth-child(4)")), 20000)
+    await driver.wait(until.elementLocated(By.xpath("//form/div/div[2]")), 20000)
   })
 })
