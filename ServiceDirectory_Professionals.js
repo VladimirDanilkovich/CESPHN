@@ -20,13 +20,7 @@ describe('Professionals', function() {
       const dropdown = await driver.findElement(By.id("Professional Type"))
       await dropdown.findElement(By.css("*[value='Allied Health Provider - Medicare Approved']")).click()
     }
-    {
-      const dropdown = await driver.findElement(By.id("Category"))
-      await dropdown.findElement(By.css("*[value='Pharmacist']")).click()
-    }
-    await driver.findElement(By.id("Location")).click()
-    await driver.findElement(By.id("Location")).sendKeys("2350")
     await driver.findElement(By.css(".btn-cy2an")).click()
-    await driver.wait(until.elementLocated(By.css(".row:nth-child(4)")), 20000)
+    await driver.wait(until.elementLocated(By.xpath("//form/div/div[2]")), 20000)
   })
 })
