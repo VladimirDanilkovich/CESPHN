@@ -33,7 +33,6 @@ describe('Valid CC (Allied Health Provider)', function() {
       const dropdown = await driver.findElement(By.id("product"))
       await dropdown.findElement(By.css("*[label='Default Product']")).click()
     }
-    await driver.findElement(By.id("gender")).click()
     {
       const dropdown = await driver.findElement(By.id("gender"))
       await dropdown.findElement(By.css("*[value='Male']")).click()
