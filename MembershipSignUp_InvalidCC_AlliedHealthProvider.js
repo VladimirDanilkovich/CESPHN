@@ -22,7 +22,7 @@ describe('Invalid CC (Allied Health Provider)', function() {
     }
     await driver.sleep(5000)
     {
-      const dropdown = await driver.findElement(By.id("Category"))
+      const dropdown = await driver.findElement(By.id("category"))
       await dropdown.findElement(By.css("*[value='Dentist']")).click()
     }
     await driver.findElement(By.id("membershipPostcode")).click()
