@@ -25,17 +25,14 @@ describe('Invalid CC (Allied Health Provider)', function() {
       const dropdown = await driver.findElement(By.id("category"))
       await dropdown.findElement(By.css("*[value='Dentist']")).click()
     }
-    await driver.findElement(By.id("membershipPostcode")).click()
     await driver.findElement(By.id("membershipPostcode")).sendKeys("123355677899")
     await driver.findElement(By.id("firstName")).sendKeys("Selenium")
     await driver.findElement(By.id("lastName")).sendKeys("Test")
     await driver.findElement(By.id("email")).sendKeys("developer+selenium@vertic.com.au")
-    await driver.findElement(By.id("product")).click()
     {
       const dropdown = await driver.findElement(By.id("product"))
       await dropdown.findElement(By.css("*[label='Default Product']")).click()
     }
-    await driver.findElement(By.id("gender")).click()
     {
       const dropdown = await driver.findElement(By.id("gender"))
       await dropdown.findElement(By.css("*[value='Male']")).click()
@@ -51,7 +48,6 @@ describe('Invalid CC (Allied Health Provider)', function() {
     await driver.findElement(By.css(".row:nth-child(6) > .col-sm-6:nth-child(1)")).click()
     await driver.findElement(By.id("cardNumber")).click()
     await driver.findElement(By.id("cardNumber")).sendKeys("4444 4444 4444 4444")
-    await driver.findElement(By.id("customerName")).click()
     await driver.findElement(By.id("customerName")).sendKeys("selenium")
     await driver.findElement(By.id("Expiry Month")).click()
     {
