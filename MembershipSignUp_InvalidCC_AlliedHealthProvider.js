@@ -3,7 +3,7 @@ const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 
 describe('Invalid CC (Allied Health Provider)', function() {
-  this.timeout(30000)
+  this.timeout(50000)
   let driver
   let vars
   beforeEach(async function() {
@@ -20,15 +20,16 @@ describe('Invalid CC (Allied Health Provider)', function() {
       const dropdown = await driver.findElement(By.id("type"))
       await dropdown.findElement(By.css("*[value='Allied Health Provider - Medicare Approved']")).click()
     }
+    await driver.sleep(5000)
+    {
+      const dropdown = await driver.findElement(By.id("Category"))
+      await dropdown.findElement(By.css("*[value='Dentist']")).click()
+    }
     await driver.findElement(By.id("membershipPostcode")).click()
     await driver.findElement(By.id("membershipPostcode")).sendKeys("123355677899")
     await driver.findElement(By.id("firstName")).sendKeys("Selenium")
     await driver.findElement(By.id("lastName")).sendKeys("Test")
     await driver.findElement(By.id("email")).sendKeys("developer+selenium@vertic.com.au")
-    {
-      const dropdown = await driver.findElement(By.id("Category"))
-      await dropdown.findElement(By.css("*[value='Dentist']")).click()
-    }
     await driver.findElement(By.id("product")).click()
     {
       const dropdown = await driver.findElement(By.id("product"))
