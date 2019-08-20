@@ -26,7 +26,7 @@ describe('Invalid CC (Allied Health Provider)', function() {
     await driver.findElement(By.id("lastName")).sendKeys("Test")
     await driver.findElement(By.id("email")).sendKeys("developer+selenium@vertic.com.au")
     {
-      const dropdown = await driver.findElement(By.id("category"))
+      const dropdown = await driver.findElement(By.id("Category"))
       await dropdown.findElement(By.css("*[value='Dentist']")).click()
     }
     await driver.findElement(By.id("product")).click()
