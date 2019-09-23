@@ -15,12 +15,10 @@ describe('Expired CC (Allied Health Provider)', function() {
   })
   it('Expired CC (Allied Health Provider)', async function() {
     await driver.get("https://dev-cesphn.cs115.force.com/apex/MembershipSignUp")
-    await driver.findElement(By.id("type")).click()
     {
       const dropdown = await driver.findElement(By.id("type"))
       await dropdown.findElement(By.css("*[value='Allied Health Provider - Medicare Approved']")).click()
     }
-    await driver.findElement(By.id("membershipPostcode")).click()
     await driver.findElement(By.id("membershipPostcode")).sendKeys("123355677899")
     await driver.findElement(By.id("firstName")).sendKeys("Selenium")
     await driver.findElement(By.id("lastName")).sendKeys("Test")
@@ -30,12 +28,10 @@ describe('Expired CC (Allied Health Provider)', function() {
       await dropdown.findElement(By.css("*[value='Dentist']")).click()
     }
     await driver.sleep(3000)
-    await driver.findElement(By.id("product")).click()
     {
       const dropdown = await driver.findElement(By.id("product"))
       await dropdown.findElement(By.css("*[label='Default Product']")).click()
     }
-    await driver.findElement(By.id("gender")).click()
     {
       const dropdown = await driver.findElement(By.id("gender"))
       await dropdown.findElement(By.css("*[value='Male']")).click()
@@ -50,21 +46,16 @@ describe('Expired CC (Allied Health Provider)', function() {
     await driver.findElement(By.id("mailingPostalCode")).sendKeys("193847383036")
     await driver.findElement(By.id("mobilePhone")).sendKeys("1237329204")
     await driver.findElement(By.css(".row:nth-child(6) > .col-sm-6:nth-child(1)")).click()
-    await driver.findElement(By.id("cardNumber")).click()
     await driver.findElement(By.id("cardNumber")).sendKeys("4444 3333 2222 1111")
-    await driver.findElement(By.id("customerName")).click()
     await driver.findElement(By.id("customerName")).sendKeys("selenium")
-    await driver.findElement(By.id("Expiry Month")).click()
     {
       const dropdown = await driver.findElement(By.id("Expiry Month"))
       await dropdown.findElement(By.css("*[value='01']")).click()
     }
-    await driver.findElement(By.id("Expiry Year")).click()
     {
       const dropdown = await driver.findElement(By.id("Expiry Year"))
       await dropdown.findElement(By.css("*[value='2019']")).click()
     }
-    await driver.findElement(By.id("CVN")).click()
     await driver.findElement(By.id("CVN")).sendKeys("123")
     await driver.findElement(By.css(".rsform-submit-button")).click()
     await driver.wait(until.elementLocated(By.css(".toast-error")), 20000)
