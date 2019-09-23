@@ -22,6 +22,8 @@ describe('Expired CC (General Practitioner)', function() {
     await driver.sleep(5000)
     {
       const dropdown = await driver.findElement(By.id("product"))
+      //await dropdown.findElement(By.css("*[label='Default Product']")).click()
+      await driver.wait(until.elementLocated(By.css("*[label='Default Product']")), 30000)
       await dropdown.findElement(By.css("*[label='Default Product']")).click()
     }
     await driver.sleep(5000)
