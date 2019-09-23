@@ -15,7 +15,6 @@ describe('Invalid CC (Allied Health Provider)', function() {
   })
   it('Invalid CC (Allied Health Provider)', async function() {
     await driver.get("https://dev-cesphn.cs115.force.com/apex/MembershipSignUp")
-    await driver.findElement(By.id("type")).click()
     {
       const dropdown = await driver.findElement(By.id("type"))
       await dropdown.findElement(By.css("*[value='Allied Health Provider - Medicare Approved']")).click()
@@ -54,14 +53,12 @@ describe('Invalid CC (Allied Health Provider)', function() {
       const dropdown = await driver.findElement(By.id("Expiry Month"))
       await dropdown.findElement(By.css("*[value='08']")).click()
     }
-    await driver.findElement(By.id("Expiry Year")).click()
     {
       const dropdown = await driver.findElement(By.id("Expiry Year"))
       await dropdown.findElement(By.css("*[value='2032']")).click()
     }
-    await driver.findElement(By.id("CVN")).click()
     await driver.findElement(By.id("CVN")).sendKeys("123")
     await driver.findElement(By.css(".rsform-submit-button")).click()
-    await driver.wait(until.elementLocated(By.css(".toast-error")), 20000)
+    await driver.wait(until.elementLocated(By.css(".toast-error")), 35000)
   })
 })
