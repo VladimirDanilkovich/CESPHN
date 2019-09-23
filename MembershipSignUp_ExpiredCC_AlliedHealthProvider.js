@@ -22,6 +22,8 @@ describe('Expired CC (Allied Health Provider)', function() {
     await driver.sleep(5000)
     {
       const dropdown = await driver.findElement(By.id("category"))
+      //await dropdown.findElement(By.css("*[value='Dentist']")).click()
+      await driver.wait(until.elementLocated(By.css("*[value='Dentist']")), 30000)
       await dropdown.findElement(By.css("*[value='Dentist']")).click()
     }
     await driver.findElement(By.id("membershipPostcode")).sendKeys("123355677899")
