@@ -15,6 +15,7 @@ describe('Invalid CC', function() {
   })
   it('Invalid CC', async function() {
     await driver.get("https://dev-cesphn.cs115.force.com/apex/membershiprenewal")
+    await driver.wait(until.elementLocated(By.id("memberNumber"), 35000)
     await driver.findElement(By.id("memberNumber")).sendKeys("201097")
     await driver.findElement(By.id("memberEmail")).sendKeys("developer+selenium@vertic.com.au")
     await driver.sleep(8000)
