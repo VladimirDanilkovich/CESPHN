@@ -15,6 +15,7 @@ describe('Inalid CC (Stakeholder)', function() {
   })
   it('Inalid CC (Stakeholder)', async function() {
     await driver.get("https://dev-cesphn.cs115.force.com/apex/MembershipSignUp")
+    await driver.sleep(5000)
     {
       const dropdown = await driver.findElement(By.id("type"))
       await dropdown.findElement(By.css("*[value='Stakeholder']")).click()
@@ -37,7 +38,7 @@ describe('Inalid CC (Stakeholder)', function() {
     await driver.findElement(By.id("mailingCity")).sendKeys("mel")
     await driver.findElement(By.id("mailingState")).sendKeys("NT")
     await driver.findElement(By.id("mailingPostalCode")).sendKeys("123355677899")
-    await driver.findElement(By.css(".c-MembershipSignUp")).click()
+    //await driver.findElement(By.css(".c-MembershipSignUp")).click()
     await driver.findElement(By.id("email")).sendKeys("developer+selenium@vertic.com.au")
     await driver.findElement(By.id("cardNumber")).sendKeys("4444444444444444")
     await driver.findElement(By.id("customerName")).sendKeys("Selenium")
@@ -50,6 +51,7 @@ describe('Inalid CC (Stakeholder)', function() {
       await dropdown.findElement(By.css("*[value='2032']")).click()
     }
     await driver.findElement(By.id("CVN")).sendKeys("123")
+    await driver.sleep(4000)
     await driver.findElement(By.css(".rsform-submit-button")).click()
     await driver.wait(until.elementLocated(By.css(".toast-error")), 35000)
   })
