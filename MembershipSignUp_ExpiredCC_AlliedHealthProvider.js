@@ -3,7 +3,7 @@ const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 
 describe('Expired CC (Allied Health Provider)', function() {
-  this.timeout(50000)
+  //this.timeout(60000)
   let driver
   let vars
   beforeEach(async function() {
@@ -49,7 +49,7 @@ describe('Expired CC (Allied Health Provider)', function() {
     await driver.findElement(By.id("mailingState")).sendKeys("NT")
     await driver.findElement(By.id("mailingPostalCode")).sendKeys("193847383036")
     await driver.findElement(By.id("mobilePhone")).sendKeys("1237329204")
-    await driver.findElement(By.css(".row:nth-child(6) > .col-sm-6:nth-child(1)")).click()
+    //await driver.findElement(By.css(".row:nth-child(6) > .col-sm-6:nth-child(1)")).click()
     await driver.findElement(By.id("cardNumber")).sendKeys("4444 3333 2222 1111")
     await driver.findElement(By.id("customerName")).sendKeys("selenium")
     {
@@ -61,6 +61,7 @@ describe('Expired CC (Allied Health Provider)', function() {
       await dropdown.findElement(By.css("*[value='2019']")).click()
     }
     await driver.findElement(By.id("CVN")).sendKeys("123")
+    await driver.sleep(5000)
     await driver.findElement(By.css(".rsform-submit-button")).click()
     await driver.wait(until.elementLocated(By.css(".toast-error")), 35000)
   })
