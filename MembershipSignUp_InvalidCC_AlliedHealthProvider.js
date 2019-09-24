@@ -3,7 +3,7 @@ const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 
 describe('Invalid CC (Allied Health Provider)', function() {
-  this.timeout(65000)
+  this.timeout(90000)
   let driver
   let vars
   beforeEach(async function() {
@@ -15,6 +15,7 @@ describe('Invalid CC (Allied Health Provider)', function() {
   })
   it('Invalid CC (Allied Health Provider)', async function() {
     await driver.get("https://dev-cesphn.cs115.force.com/apex/MembershipSignUp")
+    await driver.wait(until.elementLocated(By.id("type")), 25000)
     {
       const dropdown = await driver.findElement(By.id("type"))
       await dropdown.findElement(By.css("*[value='Allied Health Provider - Medicare Approved']")).click()
