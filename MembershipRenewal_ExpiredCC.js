@@ -30,6 +30,7 @@ describe('Expired CC', function() {
       await dropdown.findElement(By.css("*[value='2019']")).click()
     }
     await driver.findElement(By.id("CVN")).sendKeys("123")
+    await driver.sleep(4000)
     await driver.findElement(By.css(".rsform-submit-button")).click()
     await driver.wait(until.elementLocated(By.css(".toast-error")), 35000)
   })
