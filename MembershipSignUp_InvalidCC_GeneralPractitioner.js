@@ -15,6 +15,7 @@ describe('Invalid CC (General Practitioner)', function() {
   })
   it('Invalid CC (General Practitioner)', async function() {
     await driver.get("https://dev-cesphn.cs115.force.com/apex/MembershipSignUp")
+    await driver.sleep(5000)
     {
       const dropdown = await driver.findElement(By.id("type"))
       await dropdown.findElement(By.css("*[value='General Practitioner']")).click()
