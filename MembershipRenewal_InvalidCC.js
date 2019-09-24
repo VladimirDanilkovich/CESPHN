@@ -3,7 +3,7 @@ const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 
 describe('Invalid CC', function() {
-  this.timeout(50000)
+  this.timeout(60000)
   let driver
   let vars
   beforeEach(async function() {
@@ -29,6 +29,7 @@ describe('Invalid CC', function() {
       await dropdown.findElement(By.css("*[value='2032']")).click()
     }
     await driver.findElement(By.id("CVN")).sendKeys("123")
+    await driver.sleep(5000)
     await driver.findElement(By.css(".rsform-submit-button")).click()
   })
 })
