@@ -40,7 +40,7 @@ describe('Expired CC (Allied Health Provider)', function() {
       await dropdown.findElement(By.css("*[value='Male']")).click()
     }
     await driver.findElement(By.css(".row:nth-child(6) .ng-scope > .form-control")).click()
-    await driver.findElement(By.xpath("//group-input/input")).sendKeys("Selenium")
+    await driver.findElement(By.id("practiceName")).sendKeys("Selenium")
     await driver.findElement(By.id("mobilePhone")).sendKeys("1237329204")
     await driver.findElement(By.css(".c-google-address-autocomplete > #address")).sendKeys("ggd")
     await driver.findElement(By.id("mailingStreet")).sendKeys("ggd")
