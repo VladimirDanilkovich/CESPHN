@@ -32,8 +32,9 @@ describe('Valid CC', function() {
     }
     await driver.findElement(By.id("CVN")).sendKeys("123")
     await driver.sleep(4000)
+    await driver.wait(until.elementLocated(By.css(".rsform-submit-button")), 30000)
     await driver.findElement(By.css(".rsform-submit-button")).click()
-    await driver.sleep(4000)
+    await driver.sleep(3000)
     await driver.wait(until.elementLocated(By.css(".toast-success")), 40000)
   })
 })
