@@ -52,6 +52,6 @@ describe('Valid CC (General Practitioner)', function() {
     await driver.findElement(By.id("CVN")).sendKeys("123")
     await driver.sleep(5000)
     await driver.findElement(By.css(".rsform-submit-button")).click()
-    await driver.wait(until.elementLocated(By.css(".toast-success")), 35000)
+    await driver.wait(until.elementLocated(By.css(".toast-success")), 50000)
   })
 })
