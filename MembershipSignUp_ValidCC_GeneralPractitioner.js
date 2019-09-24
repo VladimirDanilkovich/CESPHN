@@ -37,7 +37,7 @@ describe('Valid CC (General Practitioner)', function() {
     await driver.findElement(By.id("mailingCity")).sendKeys("mel")
     await driver.findElement(By.id("mailingState")).sendKeys("NT")
     await driver.findElement(By.id("mailingPostalCode")).sendKeys("123355677899")
-    await driver.findElement(By.css(".c-MembershipSignUp")).click()
+    //await driver.findElement(By.css(".c-MembershipSignUp")).click()
     await driver.findElement(By.id("email")).sendKeys("developer+selenium@vertic.com.au")
     await driver.findElement(By.id("cardNumber")).sendKeys("4444333322221111")
     await driver.findElement(By.id("customerName")).sendKeys("Selenium")
