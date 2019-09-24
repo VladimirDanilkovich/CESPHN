@@ -15,9 +15,11 @@ describe('Valid CC', function() {
   })
   it('Valid CC', async function() {
     await driver.get("https://dev-cesphn.cs115.force.com/apex/membershiprenewal")
+    await driver.sleep(4000)
     await driver.findElement(By.id("memberNumber")).sendKeys("201097")
     await driver.findElement(By.id("memberEmail")).sendKeys("developer+selenium@vertic.com.au")
-    await driver.sleep(8000)
+    await driver.sleep(3000)
+    await driver.wait(until.elementLocated(By.id("cardNumber")), 30000)
     await driver.findElement(By.id("cardNumber")).sendKeys("4444 3333 2222 1111")
     await driver.findElement(By.id("customerName")).sendKeys("selenium")
     {
