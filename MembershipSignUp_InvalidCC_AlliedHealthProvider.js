@@ -3,7 +3,7 @@ const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 
 describe('Invalid CC (Allied Health Provider)', function() {
-  this.timeout(50000)
+  this.timeout(65000)
   let driver
   let vars
   beforeEach(async function() {
@@ -47,7 +47,6 @@ describe('Invalid CC (Allied Health Provider)', function() {
     //await driver.findElement(By.css(".row:nth-child(6) > .col-sm-6:nth-child(1)")).click()
     await driver.findElement(By.id("cardNumber")).sendKeys("4444 4444 4444 4444")
     await driver.findElement(By.id("customerName")).sendKeys("selenium")
-    await driver.findElement(By.id("Expiry Month")).click()
     {
       const dropdown = await driver.findElement(By.id("Expiry Month"))
       await dropdown.findElement(By.css("*[value='08']")).click()
