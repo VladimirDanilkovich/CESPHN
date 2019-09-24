@@ -14,7 +14,7 @@ describe('Valid CC (Stakeholder)', function() {
     await driver.quit();
   })
   it('Valid CC (Stakeholder)', async function() {
-    await driver.get("https://dev-cesphn.cs115.force.com/apex/MembershipSignUp")
+    await driver.get("https://dev-cesphn.cs115.force.com/MembershipSignUp")
     {
       const dropdown = await driver.findElement(By.id("type"))
       await dropdown.findElement(By.css("*[value='Stakeholder']")).click()
