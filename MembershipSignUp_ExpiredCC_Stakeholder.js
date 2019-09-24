@@ -3,7 +3,7 @@ const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 
 describe('Expired CC (Stakeholder)', function() {
-  this.timeout(50000)
+  this.timeout(60000)
   let driver
   let vars
   beforeEach(async function() {
@@ -50,6 +50,7 @@ describe('Expired CC (Stakeholder)', function() {
       await dropdown.findElement(By.css("*[value='2019']")).click()
     }
     await driver.findElement(By.id("CVN")).sendKeys("123")
+    await driver.sleep(5000)
     await driver.findElement(By.css(".rsform-submit-button")).click()
     await driver.wait(until.elementLocated(By.css(".toast-error")), 35000)
   })
