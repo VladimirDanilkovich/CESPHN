@@ -3,7 +3,7 @@ const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 
 describe('Expired CC (Allied Health Provider)', function() {
-  //this.timeout(60000)
+  this.timeout(80000)
   let driver
   let vars
   beforeEach(async function() {
