@@ -3,7 +3,7 @@ const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 
 describe('Expired CC (Stakeholder)', function() {
-  this.timeout(60000)
+  this.timeout(90000)
   let driver
   let vars
   beforeEach(async function() {
@@ -15,6 +15,7 @@ describe('Expired CC (Stakeholder)', function() {
   })
   it('Expired CC (Stakeholder)', async function() {
     await driver.get("https://dev-cesphn.cs115.force.com/apex/MembershipSignUp")
+    await driver.wait(until.elementLocated(By.id("type")), 30000)
     {
       const dropdown = await driver.findElement(By.id("type"))
       await dropdown.findElement(By.css("*[value='Stakeholder']")).click()
