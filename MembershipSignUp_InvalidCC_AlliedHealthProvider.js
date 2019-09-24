@@ -44,7 +44,7 @@ describe('Invalid CC (Allied Health Provider)', function() {
     await driver.findElement(By.id("mailingState")).sendKeys("NT")
     await driver.findElement(By.id("mailingPostalCode")).sendKeys("193847383036")
     await driver.findElement(By.id("mobilePhone")).sendKeys("1237329204")
-    await driver.findElement(By.css(".row:nth-child(6) > .col-sm-6:nth-child(1)")).click()
+    //await driver.findElement(By.css(".row:nth-child(6) > .col-sm-6:nth-child(1)")).click()
     await driver.findElement(By.id("cardNumber")).click()
     await driver.findElement(By.id("cardNumber")).sendKeys("4444 4444 4444 4444")
     await driver.findElement(By.id("customerName")).sendKeys("selenium")
